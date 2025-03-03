@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { SpreadsheetProvider } from './context/SpreadsheetContext';
+import Toolbar from './components/Toolbar';
+import FormulaBar from './components/FormulaBar';
+import Spreadsheet from "./components/Spreadsheet";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SpreadsheetProvider>
+      <div className="app">
+        <Toolbar />
+        <FormulaBar onApplyFormula={(formula) => console.log('Formula:', formula)} />
+        <Spreadsheet />
+      </div>
+    </SpreadsheetProvider>
   );
-}
+};
 
 export default App;

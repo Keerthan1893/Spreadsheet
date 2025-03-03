@@ -1,0 +1,42 @@
+.spreadsheet-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  min-width: 100px;
+}
+
+th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: center;
+}
+
+td input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  background: transparent;
+}
+
+td input:focus {
+  background-color: #e8f0fe;
+  border: 1px solid #4285f4;
+}
